@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Martes Visa</title>
+
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/layout.css">
+	<link rel="stylesheet" type="text/css" href="../css/modular.css">
+	<link rel="stylesheet" type="text/css" href="../css/restaurantes.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<script src="../js/jquery-1.12.1.min.js"></script>
+	
+
+</head>
+<body>
+
+<!--- nav header-->
+<div class="navbar">
+	<div class="logo-mv">
+		<span>#Martes Visa</span>
+	</div>
+	<ul class="nav-header white">
+		<li class="find-restaurant"><i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i> Buscar restaurantes</li>
+		<!--<li>Ingresa / Registrate</li>-->
+		<li class="icon-main"><i class="fa fa-bars"></i></li>
+	</ul>
+</div>
+<!--close nav header-->
+<!--banner header-->
+<div class="banner-header banner-restaurantes">
+	<div class="title-internas">RESTAURANTES</div>
+</div>
+<!--close banner ehader-->
+<!---finder-->
+<div class="content-finder content-finder-restaurantes">
+	<div class="box-finder">
+		<div class="col-field-finder">
+			<input required="required" placeholder="Restaurante" name="restaurante" type="text">
+		</div>
+
+		<div class="col-field-finder">
+			<i class="fa fa-angle-down"></i>
+			<select name="restaurantes">
+				<option value="1" disabled="" selected="" style="display: none;">Ciudad</option>
+				<option value="barranquilla">Barranquilla</option>
+				<option value="bogota D.C">Bogotá D.C</option>
+				<option value="bucaramanga">Bucaramanga</option>
+				<option value="cali">Cali</option>
+				<option value="Cartagena de Indias">Cartagena de Indias</option>
+				<option value="Cúcuta">Cúcuta</option>
+				<option value="Medellín">Medellín</option>
+				<option value="Norte de Santander">Norte de Santander</option>
+				<option value="Pereira">Pereira</option>
+				<option value="Santa Marta">Santa Marta</option>
+				<option value="Santander">Santander</option>
+			</select>
+		</div>
+		<div class="col-field-finder">
+			<i class="fa fa-angle-down"></i>
+			<select name="zona">
+				<option value="1" disabled selected style="display: none;">Zona</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+			</select>
+		</div>
+		<div class="col-field-finder">
+			<i class="fa fa-angle-down"></i>
+			<select name="tipo de comida">
+				<option value="1" disabled selected style="display: none;">Tipo de comida</option>
+				<option value="Arabe">Arabe</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</select>
+		</div>
+		<div class="col-field-finder">
+			<i class="fa fa-angle-down"></i>
+			<select name="plan">
+				<option value="1" disabled selected style="display: none;">Plan</option>
+				<option value="Arabe">Arabe</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</select>
+		</div>
+		<div class="col-field-finder">
+			<button type="submit" id="saveForm">
+				<span>Buscar</span>
+			</button>
+		</div>
+	</div>
+</div>
+<!---close finder-->
+<!--second-->
+
+<div class="section" id="c-restaurantes">
+	<div class="row">
+		<!--reloj-->
+		<div class="btn-reloj">
+			<span>CONOCE LOS RESTAURANTES A LOS QUE PUEDES APLICAR A ESTA HORA</span>
+			<div>
+				<div class="replegado"><i class="fa fa-angle-down"></i></div>
+			</div>
+		</div>
+		<div class="content-box-reloj-r content-box-reloj ">
+			<!--reloj-->
+			<h1 class="blue">Son las</h1>
+			<div id="clock-1"></div>
+			<div class="content-reloj content-reloj-r">
+				<ul>
+					<li><div><img src="../img/home/ico-almuerzo.png"/></div></li>
+					<li><div><span class="reloj-hour">2</span></div></li>
+					<li><div><span class="divisor">:</span></div></li>
+					<li><div><span class="reloj-minute">2</span></div></li>
+					<li><div><span class="reloj-second">0</span></div></li>
+					<li><div><span class="reloj-med">p.m.</span></div></li>
+				</ul>
+			</div>
+			<!--close reloj-->
+			<h1 class="blue">puedes disfrutar de los siguientes establecimientos:</h1>
+			<!--galeria-->
+			<div class="content-gal-reloj content-gal-reloj-r">
+				<div class="fl-gal-reloj-next"><i class="fa fa-angle-right"></i></div>
+				<div class="fl-gal-reloj-prev"><i class="fa fa-angle-left"></i></div>
+				<ul class="slider-reloj">
+					<li>
+						<div class="box-s-reloj"><a href=""><img src="../img/home/logo-karal.jpg"/></a></div>
+						<div class="box-s-reloj"><a href=""><img src="../img/home/logo-karal.jpg"/></a></div>
+						<div class="box-s-reloj"><a href=""><img src="../img/home/logo-karal.jpg"/></a></div>
+						<div class="box-s-reloj"><a href=""><img src="../img/home/logo-karal.jpg"/></a></div>
+						<div class="box-s-reloj"><a href=""><img src="../img/home/logo-karal.jpg"/></a></div>
+					</li>
+					<li>
+						<div class="box-s-reloj"><a href=""><img src="../img/home/logo-karal.jpg"/></a></div>
+						<div class="box-s-reloj"><a href=""><img src="../img/home/logo-karal.jpg"/></a></div>
+						<div class="box-s-reloj"><a href=""><img src="../img/home/logo-karal.jpg"/></a></div>
+						<div class="box-s-reloj"><a href=""><img src="../img/home/logo-karal.jpg"/></a></div>
+						<div class="box-s-reloj"><a href=""><img src="../img/home/logo-karal.jpg"/></a></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--close reloj-->
+		<!--pagination-->
+		<ul class="pagination">
+			<li><input type="submit" value="" id="prev-pag"><i class="fa fa-angle-left"></i></li>
+			<li><input type="submit" value="1" class="active-pag"></li>
+			<li><input type="submit" value="2"></li>
+			<li><input type="submit" value="3"></li>
+			<li><input type="submit" value="4"></li>
+			<li><input type="submit" value="5"></li>
+			<li><input type="submit" value="6"></li>
+			<li><input type="submit" value="7"></li>
+			<li><input type="submit" value="8"></li>
+			<li><input type="submit" value="9"></li>
+			<li><input type="submit" value="10"></li>
+			<li><input type="submit" value="" id="next-pag"><i class="fa fa-angle-right"></i></li>
+		</ul>
+		<!--close pagination-->
+		<!--boxes-restaurante-->
+		<div class="content-boxes-restaurant">
+			<!--box-->
+			<div class="box-restaurant">
+				<div class="img-restaurant"></div>
+				<div class="box-detalle-rte">
+					<h2 class="destacado-line">Absenta Bar</h2>
+					<div class="star-ranking">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+					</div>
+					<span class="location-r"><i class="fa fa-map-marker"></i> Bogotá - Medellín</span>
+					<span class="plan-r">Plan de amigos</span>
+					<span class="food-r">Comida peruana</span>
+					<span class="hour-r"><i class="fa fa-clock-o"></i><strong>De 12:30 p.m. a 9:00p.m.</strong></span>
+				</div>
+			</div>
+			<!--close-box-->
+			<!--box-->
+			<div class="box-restaurant">
+				<div class="img-restaurant"></div>
+				<div class="box-detalle-rte">
+					<h2 class="destacado-line">Absenta Bar</h2>
+					<div class="star-ranking">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+					</div>
+					<span class="location-r"><i class="fa fa-map-marker"></i> Bogotá - Medellín</span>
+					<span class="plan-r">Plan de amigos</span>
+					<span class="food-r">Comida peruana</span>
+					<span class="hour-r"><i class="fa fa-clock-o"></i><strong>De 12:30 p.m. a 9:00p.m.</strong></span>
+				</div>
+			</div>
+			<!--close-box-->
+			<!--box-->
+			<div class="box-restaurant">
+				<div class="img-restaurant"></div>
+				<div class="box-detalle-rte">
+					<h2 class="destacado-line">Absenta Bar</h2>
+					<div class="star-ranking">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+					</div>
+					<span class="location-r"><i class="fa fa-map-marker"></i> Bogotá - Medellín</span>
+					<span class="plan-r">Plan de amigos</span>
+					<span class="food-r">Comida peruana</span>
+					<span class="hour-r"><i class="fa fa-clock-o"></i><strong>De 12:30 p.m. a 9:00p.m.</strong></span>
+				</div>
+			</div>
+			<!--close-box-->
+			<!--box-->
+			<div class="box-restaurant">
+				<div class="img-restaurant"></div>
+				<div class="box-detalle-rte">
+					<h2 class="destacado-line">Absenta Bar</h2>
+					<div class="star-ranking">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+					</div>
+					<span class="location-r"><i class="fa fa-map-marker"></i> Bogotá - Medellín</span>
+					<span class="plan-r">Plan de amigos</span>
+					<span class="food-r">Comida peruana</span>
+					<span class="hour-r"><i class="fa fa-clock-o"></i><strong>De 12:30 p.m. a 9:00p.m.</strong></span>
+				</div>
+			</div>
+			<!--close-box-->
+			<!--box-->
+			<div class="box-restaurant">
+				<div class="img-restaurant"></div>
+				<div class="box-detalle-rte">
+					<h2 class="destacado-line">Absenta Bar</h2>
+					<div class="star-ranking">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+					</div>
+					<span class="location-r"><i class="fa fa-map-marker"></i> Bogotá - Medellín</span>
+					<span class="plan-r">Plan de amigos</span>
+					<span class="food-r">Comida peruana</span>
+					<span class="hour-r"><i class="fa fa-clock-o"></i><strong>De 12:30 p.m. a 9:00p.m.</strong></span>
+				</div>
+			</div>
+			<!--close-box-->
+			<!--box-->
+			<div class="box-restaurant">
+				<div class="img-restaurant"></div>
+				<div class="box-detalle-rte">
+					<h2 class="destacado-line">Absenta Bar</h2>
+					<div class="star-ranking">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+					</div>
+					<span class="location-r"><i class="fa fa-map-marker"></i> Bogotá - Medellín</span>
+					<span class="plan-r">Plan de amigos</span>
+					<span class="food-r">Comida peruana</span>
+					<span class="hour-r"><i class="fa fa-clock-o"></i><strong>De 12:30 p.m. a 9:00p.m.</strong></span>
+				</div>
+			</div>
+			<!--close-box-->
+			<!--box-->
+			<div class="box-restaurant">
+				<div class="img-restaurant"></div>
+				<div class="box-detalle-rte">
+					<h2 class="destacado-line">Absenta Bar</h2>
+					<div class="star-ranking">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+					</div>
+					<span class="location-r"><i class="fa fa-map-marker"></i> Bogotá - Medellín</span>
+					<span class="plan-r">Plan de amigos</span>
+					<span class="food-r">Comida peruana</span>
+					<span class="hour-r"><i class="fa fa-clock-o"></i><strong>De 12:30 p.m. a 9:00p.m.</strong></span>
+				</div>
+			</div>
+			<!--close-box-->
+			<!--box-->
+			<div class="box-restaurant">
+				<div class="img-restaurant"></div>
+				<div class="box-detalle-rte">
+					<h2 class="destacado-line">Absenta Bar</h2>
+					<div class="star-ranking">
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+						<i class="fa fa-star"></i>
+					</div>
+					<span class="location-r"><i class="fa fa-map-marker"></i> Bogotá - Medellín</span>
+					<span class="plan-r">Plan de amigos</span>
+					<span class="food-r">Comida peruana</span>
+					<span class="hour-r"><i class="fa fa-clock-o"></i><strong>De 12:30 p.m. a 9:00p.m.</strong></span>
+				</div>
+			</div>
+			<!--close-box-->
+		</div>
+		<!--close-boxes-restaurant-->
+		<!--fl-up-->
+		<span class="btn-up up-rte"><i class="fa fa-angle-up"></i></span>
+		<!--close-fl-up-->
+	</div>
+</div>
+<!--footer-->
+
+	<footer>
+		<div class="content-footer footer-relative">
+			<div class="section">
+				<div class="row">
+					<div class="col-lg-10 col-md-12">
+						<p> <a href="http://apps.visa.com.co/MartesVisa/Pdf/TerminosYCondiciones.pdf" target="_new"><span class="azul">Ver cosndiciones y restaurantes participantes |</span> </a><a href="http://lac.visa.com/about/privacy.jsp" target="_new"><span class="azul">Política de Privacidad</span></a><br>
+						Visa International Service Association and (c) 2015 Visa Inc. Todos los derechos reservados. Mejor visualización en IE 9.0 - Firefox 29 o superior, permitir al navegador el uso de JavaScript.Diageo te invita a disfrutar con responsabilidad. Prohíbase el expendio de bebidas embriagantes a menores de edad, Ley 124 de 1994. El exceso de alcohol es perjudicial para la salud Ley 30 1996 Promoción válida del 5 de mayo al 24 de noviembre de 2015.
+						</p>
+					</div>
+					<div class="col-lg-2 col-md-12">
+						<div class="logo-footer">
+							<img src="../img/genericas/logo-visa.png">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	<!--close second-->
+	<script src="../js/jquery.bxslider.min.js"></script>
+	<script src="../js/function.js"></script>
+	<script src="../js/home.js"></script>
+	<script src="../js/moment.js"></script>
+	
+	<script src="../js/jquery.fullpage.js"></script>
+	<script src="../js/jquery.easings.min.js"></script>
+	<script src="../js/TweenMax.min.js"></script>
+	<script src="../js/jquery.scrollTo.min.js"></script>
+	
+
+</body>
+</html>

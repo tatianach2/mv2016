@@ -1,0 +1,317 @@
+
+/***Home***/
+.home{
+	background-repeat: no-repeat;
+    position: relative;
+    text-align: center;
+    width: 100%;
+    min-height: 550px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+#myVideo{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top:0;
+    right:0;
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    background-color: black; /* in case the video doesn't fit the whole page*/
+    background-image: /* our video */;
+    background-position: center center;
+    background-size: contain;
+    object-fit: cover; /*cover video background */
+    z-index:3;
+}
+.wrap-list-h{
+    padding-top: 120px;
+}
+.section-first-home{
+    background-color: rgba(0,0,0,0.5);
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding-top: 0;
+}
+.pages .home:first-child {
+    /*background-image: url(../img/home/bg-ej.jpg);*/
+    background-color: rgba(0,0,0,0.5);
+    padding-top: 0;
+}
+.pages .home:first-child h1{
+    padding-top: 300px;
+}
+.pages .home:nth-child(2) {
+    background-color: #fff;
+    background-color: rgba(255,255,255,.5);
+}
+.pages .home:nth-child(3) {
+    background-image: url(../img/home/bg-planes.jpg);
+    background-position: 0px 0px;
+    background-color: rgba(0,0,0,.5);
+}
+.pages .home:last-child {
+    /*background-image: url(../img/home/bg-planes.jpg);*/
+    background-position: 0px 0px;
+    background-color: rgba(235,235,235,.9);
+}
+.pages .home h1{
+	font-size: 34px;
+	line-height: 42px;
+	font-family: 'MyriadPro_Light';
+    font-weight: lighter;
+}
+.content-fl-nav-home {
+    margin: 100px auto;
+    text-align: center;
+    width: 100%;
+    bottom: 50px;
+}
+.fl-nav-home{
+	border-radius: 50%;
+	border: solid 2px #fff;
+    color: #fff;
+    height: 52px;
+    width: 52px;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 45px;
+    line-height: 50px;
+}
+/*nav-side*/
+.nav-side{
+    position: fixed;
+    right: 10px;
+    top: 50%;
+}
+.nav-side span{
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+    border: solid 2px #555555;
+    border-radius: 50%;
+}
+/***planes***/
+.content-planes{
+    width: 80%;
+    margin: 40px auto;
+}
+.content-planes ul li{
+    width: 120px;
+    display:inline-block;
+    margin: 10px 20px;
+}
+.content-planes .icon-plan{
+    width: 110px;
+    height: 110px;
+    border: solid 2px #a9a8a8;
+    border-radius: 50%;
+}
+.content-planes .icon-plan img{
+    padding-top: 10px;
+}
+.content-planes .title-plan{
+    font-family: 'MyriadPro_Light';
+    font-weight: lighter;
+    font-size: 20px;
+    color: #fff;
+    position: relative;
+    margin-top: 5px;
+}
+.content-planes .title-plan:before{
+    content: '';
+    display: block;
+    width: 25px;
+    margin: 0 auto;
+    position: relative;
+    bottom: -30px;
+    height: 3px;
+    background-color: #fcb315;
+}
+.content-planes .content-fl-nav-home{
+    opacity: 0;
+}
+/*****novedades***/
+.novedades{
+    padding-top: 0;
+}
+.novedad-img{
+    float: left;
+    position: relative;
+}
+.novedad-img img{
+    position: absolute;
+    left: -700px;
+    opacity: 0;
+}
+.txt-novedades{
+    text-align: left;
+    max-width: 430px;
+    opacity: 0;
+    margin: 200px 20px;
+}
+.txt-novedades .subtitle{
+    font-family: 'MyriadPro_Light';
+    font-weight: lighter;
+    font-size: 24px;
+    line-height: 27px;
+}
+.txt-novedades .btn{
+    float: left;
+    margin: 36px 0;
+}
+.txt-novedades .btn span{
+    padding: 5px 25px;
+    font-family: 'MyriadPro_Regular';
+    font-size:18px;
+    color: #555555;
+    border: solid 2px #555555;
+}
+.fl-novedades{
+    float: left;
+    margin-left: 20px;
+}
+
+/*cometnarios**/
+.content-coments-home{
+    opacity: 0;
+    margin-top: 100px;
+}
+.content-box-reloj-h{
+    opacity: 0;
+    margin-top: 150px;
+}
+/*planes*/
+#planes h1{
+    opacity: 0;
+}
+.content-planes ul li{
+    opacity: 0;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    /*novedades*/
+    .txt-novedades{
+        margin: 130px 20px;
+    }
+     /*planes*/
+    .content-planes {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 768px) {
+    /***inicio***/
+    .pages .home h1{
+        padding: 10px 20px;
+    }
+    .pages .home:first-child h1 {
+        padding: 300px 10% 30px 10%;
+    }
+    .content-fl-nav-home {
+        margin: 50px auto;
+    }
+    .pages .wrap-list-h {
+        padding: 100px 10px 70px 10px;
+    }
+    .pages .home:first-child h1 br,
+    .pages .home:nth-child(3) br{
+        display: none;
+    }
+    .pages .home:first-child{
+        padding: 0px;
+    }
+    #secondPage{
+        overflow:auto;
+    }
+    .content-footer p{
+        border-right: none;
+    }
+    .logo-footer{
+        text-align: right;
+    }
+    .dots-comentarios{
+        width: 90%;
+    }
+    .dots-comentarios span{
+        margin: 0 40px;
+    }
+    /*planes*/
+    .content-planes {
+        width: 90%;
+    }
+    /*novedades*/
+    .pages .home:nth-child(4){
+        padding: 0px;
+    }
+    .novedad-img{
+        overflow: hidden;
+        height: 450px;
+    }
+    .txt-novedades{
+        margin: 40px 20px;
+        max-width: 100%;
+    }
+    .txt-novedades .btn{
+        text-align: center;
+        float: none;
+    }
+    .fl-novedades{
+        float: none;
+    }
+    .txt-novedades .subtitle{
+        margin: 0 20px;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    /*inicio**/
+    .dots-comentarios span{
+        margin: 0 20px;
+    }
+    /*reloj**/
+    .content-reloj ul li:first-child{
+        display: none;
+    }
+    .content-fl-nav-home{
+        margin: 50px auto;
+    }
+    .pages .home:first-child h1 {
+        padding: 200px 10% 50px;
+    }
+    /****planes***/
+    .content-planes {
+        width: 90%;
+    }
+    .content-planes ul li{
+        width: 115px;
+    }
+    .content-planes .icon-plan {
+        width: 90px;
+        height: 90px;
+    }
+    .icon-plan {
+        margin: 10px 5px;
+    }
+    .content-planes .icon-plan img{
+        padding-top: 0;
+    }
+    /**novedades***/
+    .novedad-img{
+        height: 250px;
+    }
+
+
+    
+}
+
+    

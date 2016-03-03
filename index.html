@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Martes Visa</title>
+
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./css/modular.css">
+	<link rel="stylesheet" type="text/css" href="./css/layout.css">
+	<link rel="stylesheet" type="text/css" href="./css/home.css">
+	<link rel="stylesheet" type="text/css" href="./css/jquery.fullPage.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<script src="./js/jquery-1.12.1.min.js"></script>
+	
+
+</head>
+<body>
+
+<!--- nav header-->
+<div class="navbar">
+		<div class="logo-mv">
+			<span>#Martes Visa</span>
+		</div>
+		<ul class="nav-header">
+			<li class="find-restaurant"><i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i> Buscar restaurantes</li>
+			<!--<li>Ingresa / Registrate</li>-->
+			<li class="icon-main"><i class="fa fa-bars"></i></li>
+		</ul>
+</div>
+
+<!--close nav header-->
+<!--nav-side-fullpage-->
+<div id="fp-nav" class="right">
+	<ul>
+	</ul>
+</div>
+<!--close-nav-side-fullpage-->
+<!---finder-->
+<div class="content-finder">
+<?php include ('./includes/nav-header.php'); ?>
+	<div class="box-finder">
+		<div class="col-field-finder">
+			<input required="required" placeholder="Restaurante" name="restaurante" type="text">
+		</div>
+
+		<div class="col-field-finder">
+			<i class="fa fa-angle-down"></i>
+			<select name="restaurantes">
+				<option value="1" disabled="" selected="" style="display: none;">Ciudad</option>
+				<option value="barranquilla">Barranquilla</option>
+				<option value="bogota D.C">Bogotá D.C</option>
+				<option value="bucaramanga">Bucaramanga</option>
+				<option value="cali">Cali</option>
+				<option value="Cartagena de Indias">Cartagena de Indias</option>
+				<option value="Cúcuta">Cúcuta</option>
+				<option value="Medellín">Medellín</option>
+				<option value="Norte de Santander">Norte de Santander</option>
+				<option value="Pereira">Pereira</option>
+				<option value="Santa Marta">Santa Marta</option>
+				<option value="Santander">Santander</option>
+			</select>
+		</div>
+		<div class="col-field-finder">
+			<i class="fa fa-angle-down"></i>
+			<select name="zona">
+				<option value="1" disabled selected style="display: none;">Zona</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+			</select>
+		</div>
+		<div class="col-field-finder">
+			<i class="fa fa-angle-down"></i>
+			<select name="tipo de comida">
+				<option value="1" disabled selected style="display: none;">Tipo de comida</option>
+				<option value="Arabe">Arabe</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</select>
+		</div>
+		<div class="col-field-finder">
+			<i class="fa fa-angle-down"></i>
+			<select name="plan">
+				<option value="1" disabled selected style="display: none;">Plan</option>
+				<option value="Arabe">Arabe</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</select>
+		</div>
+		<div class="col-field-finder">
+			<button type="submit" id="saveForm">
+				<span>Buscar</span>
+			</button>
+		</div>
+
+	</div>
+</div>
+<!---close finder-->
+
+<!--pages-->
+<ul class="pages">
+	<!---first-->
+	<li class="home" id="inicio">
+
+		<video autoplay loop muted id="myVideo">
+			<source src="./img/home/flowers.mp4" type="video/mp4">
+			<source src="./img/home/flowers.webm" type="video/webm">
+		</video>
+		<div class="section-first-home">
+			<h1 class="white">#MartesVisa el programa mas esperado del año</br>
+			Ahora de 7:00 a.m. a 10:00 p.m.</h1>
+			<div class="content-fl-nav-home">
+				<div class="fl-nav-home" id="first-nav"><i class="fa fa-angle-down"></i></div>
+			</div> 
+		</div>
+		
+	</li>
+	<!--close first-->
+	<!--second-->
+	<li class="home" id="reloj">
+		<div class="wrap-list-h">
+			<div class="section ">
+				<div class="row">
+					<div class="content-box-reloj content-box-reloj-h">
+						<!--reloj-->
+						<h1 class="blue">Son las</h1>
+						<div id="clock-1"></div>
+						<div class="content-reloj content-reloj-h">
+							<ul>
+								<li><div><img src="./img/home/ico-almuerzo.png"/></div></li>
+								<li><div><span class="reloj-hour">2</span></div></li>
+								<li><div><span class="divisor">:</span></div></li>
+								<li><div><span class="reloj-minute">2</span></div></li>
+								<li><div><span class="reloj-second">0</span></div></li>
+								<li><div><span class="reloj-med">p.m.</span></div></li>
+							</ul>
+						</div>
+						<!--close reloj-->
+						<h1 class="blue">puedes disfrutar de los siguientes establecimientos:</h1>
+						<!--galeria-->
+						<div class="content-gal-reloj">
+							<div class="fl-gal-reloj-next"><i class="fa fa-angle-right"></i></div>
+							<div class="fl-gal-reloj-prev"><i class="fa fa-angle-left"></i></div>
+							<ul class="slider-reloj">
+								<li>
+									<div class="box-s-reloj"><a href=""><img src="./img/home/logo-karal.jpg"/></a></div>
+									<div class="box-s-reloj"><a href=""><img src="./img/home/logo-karal.jpg"/></a></div>
+									<div class="box-s-reloj"><a href=""><img src="./img/home/logo-karal.jpg"/></a></div>
+									<div class="box-s-reloj"><a href=""><img src="./img/home/logo-karal.jpg"/></a></div>
+									<div class="box-s-reloj"><a href=""><img src="./img/home/logo-karal.jpg"/></a></div>
+								</li>
+								<li>
+									<div class="box-s-reloj"><a href=""><img src="./img/home/logo-karal.jpg"/></a></div>
+									<div class="box-s-reloj"><a href=""><img src="./img/home/logo-karal.jpg"/></a></div>
+									<div class="box-s-reloj"><a href=""><img src="./img/home/logo-karal.jpg"/></a></div>
+									<div class="box-s-reloj"><a href=""><img src="./img/home/logo-karal.jpg"/></a></div>
+									<div class="box-s-reloj"><a href=""><img src="./img/home/logo-karal.jpg"/></a></div>
+								</li>
+							</ul>
+						</div>
+						<!--close galeria-->
+						<div class="content-fl-nav-home">
+							<div class="fl-nav-home" id="second-nav"><i class="fa fa-angle-down"></i></div>
+						</div> 
+					</div>
+				</div>
+			</div>
+		</div>		
+	</li>
+	<!--close second-->
+	<!--third-->
+	<li class="home bg-planes" id="planes">
+		<div class="wrap-list-h">
+			<h1 class="white">
+				También puedes disfrutar lo mejor de Martes Visa</br>
+				con las siguientes categorías
+			</h1>
+			<div class="content-planes">
+				<ul>
+					<li class="box-plan">
+						<div class="icon-plan"><img src="./img/home/icon-amigos.png"></div>
+						<div class="title-plan">Amigos</div>
+					</li>
+					<li class="box-plan">
+						<div class="icon-plan"><img src="./img/home/icon-amigos.png"></div>
+						<div class="title-plan">Familia</div>
+					</li>
+					<li class="box-plan">
+						<div class="icon-plan"><img src="./img/home/icon-amigos.png"></div>
+						<div class="title-plan">Primera cita</div>
+					</li>
+					<li class="box-plan">
+						<div class="icon-plan"><img src="./img/home/icon-amigos.png"></div>
+						<div class="title-plan">Exóticos</div>
+					</li>
+					<li class="box-plan">
+						<div class="icon-plan"><img src="./img/home/icon-amigos.png"></div>
+						<div class="title-plan">Para negocios</div>
+					</li>
+				</ul>
+				<div class="content-fl-nav-home">
+					<div class="fl-nav-home" id="third-nav"><i class="fa fa-angle-down"></i></div>
+				</div> 
+			</div>
+		</div>		
+	</li>
+	<!--close third-->
+	<!--four-->
+	<li class="home novedades" id="novedades">
+		<div class="row">
+			<!--imagen-->
+			<div class="col-lg-6 col-md-12">
+				<div class="novedad-img">
+					<img src="./img/home/bg-novedades.jpg"/>
+				</div>
+			</div>
+			<!--close imagen-->
+			<!--article-->
+			<div class="col-lg-6 col-md-12">
+				<div class="txt-novedades">
+					<h1 class="blue">
+						Para salir con alguien especial
+						empieza este #MartesVisa
+						La Ruta del Amor
+					</h1>
+					<div class="subtitle gray-dark">
+						Hicimos una lista de restaurantes donde podrás comenzar nuevas historias, revivir el amor e incluso lograr el sí para una segunda cita. Una ruta gastronómica tan exquisita que enamorará a más de uno.
+					</div>
+					<div class="btn"><a href=""><span>leer más</span></a></div>
+				</div>
+					<div class="content-fl-nav-home">
+					<div class="fl-nav-home fl-novedades" id="four-nav"><i class="fa fa-angle-down"></i></div>
+				</div>
+			</div>
+			<!--close article-->
+		</div>
+	</li>
+	<!--close-four-->
+	<!--five-->
+	<li class="home" id="comentarios">
+		<div class="wrap-list-h">
+			<div class="contents-coments content-coments-home">
+				<h1 class="blue">Lo que otros dicen de Martes Visa</h1>
+
+
+				
+				<ul class="bxslider">
+					<!---coments 1-->
+					<li>
+						<!--box1-->
+						<div class="box-coment content-center">
+							<div class="first-box-coment">
+								<div class="avatar">
+									<img src="./img/home/avatar.jpg"/>
+								</div>
+								<div class="content-coment-box">
+									<div class="triangle-coment"></div>
+									<div class="txt-coment">
+										Super recomendado! Adoro los #MartesVisa
+									</div>
+									
+								</div>
+							</div>
+							<div class="second-box-coment">
+								<div class="name-coment">Manuelita Chavez</div>
+								<div class="date-coment">17/05/2016</div>
+							</div>
+						</div>
+						<!--close box1-->
+						<!--box1-->
+						<div class="box-coment content-center">
+							<div class="first-box-coment">
+								<div class="avatar">
+									<img src="./img/home/avatar.jpg"/>
+								</div>
+								<div class="content-coment-box">
+									<div class="triangle-coment"></div>
+									<div class="txt-coment">
+										Super recomendado! Adoro los #MartesVisa
+									</div>
+									
+								</div>
+							</div>
+							<div class="second-box-coment">
+								<div class="name-coment">Manuelita Chavez</div>
+								<div class="date-coment">17/05/2016</div>
+							</div>
+						</div>
+						<!--close box1-->
+					</li>
+					<!--close coments 1-->
+					<!---coments 2-->
+					<li>
+						<!--box1-->
+						<div class="box-coment content-center">
+							<div class="first-box-coment">
+								<div class="avatar">
+									<img src="./img/home/avatar.jpg"/>
+								</div>
+								<div class="content-coment-box">
+									<div class="triangle-coment"></div>
+									<div class="txt-coment">
+										Super recomendado! Adoro los #MartesVisa
+									</div>
+									
+								</div>
+							</div>
+							<div class="second-box-coment">
+								<div class="name-coment">Manuelita Chavez</div>
+								<div class="date-coment">17/05/2016</div>
+							</div>
+						</div>
+						<!--close box1-->
+						<!--box1-->
+						<div class="box-coment content-center">
+							<div class="first-box-coment">
+								<div class="avatar">
+									<img src="./img/home/avatar.jpg"/>
+								</div>
+								<div class="content-coment-box">
+									<div class="triangle-coment"></div>
+									<div class="txt-coment">
+										Super recomendado! Adoro los #MartesVisa
+									</div>
+									
+								</div>
+							</div>
+							<div class="second-box-coment">
+								<div class="name-coment">Manuelita Chavez</div>
+								<div class="date-coment">17/05/2016</div>
+							</div>
+						</div>
+						<!--close box1-->
+					</li>
+					<!--close coments 2-->
+					<!---coments 3-->
+					<li>
+						<!--box1-->
+						<div class="box-coment content-center">
+							<div class="first-box-coment">
+								<div class="avatar">
+									<img src="./img/home/avatar.jpg"/>
+								</div>
+								<div class="content-coment-box">
+									<div class="triangle-coment"></div>
+									<div class="txt-coment">
+										Super recomendado! Adoro los #MartesVisa
+									</div>
+									
+								</div>
+							</div>
+							<div class="second-box-coment">
+								<div class="name-coment">Manuelita Chavez</div>
+								<div class="date-coment">17/05/2016</div>
+							</div>
+						</div>
+						<!--close box1-->
+						<!--box1-->
+						<div class="box-coment content-center">
+							<div class="first-box-coment">
+								<div class="avatar">
+									<img src="./img/home/avatar.jpg"/>
+								</div>
+								<div class="content-coment-box">
+									<div class="triangle-coment"></div>
+									<div class="txt-coment">
+										Super recomendado! Adoro los #MartesVisa
+									</div>
+									
+								</div>
+							</div>
+							<div class="second-box-coment">
+								<div class="name-coment">Manuelita Chavez</div>
+								<div class="date-coment">17/05/2016</div>
+							</div>
+						</div>
+						<!--close box1-->
+					</li>
+					<!--close coments 3-->
+					<!---coments 4-->
+					<li>
+						<!--box1-->
+						<div class="box-coment content-center">
+							<div class="first-box-coment">
+								<div class="avatar">
+									<img src="./img/home/avatar.jpg"/>
+								</div>
+								<div class="content-coment-box">
+									<div class="triangle-coment"></div>
+									<div class="txt-coment">
+										Super recomendado! Adoro los #MartesVisa
+									</div>
+									
+								</div>
+							</div>
+							<div class="second-box-coment">
+								<div class="name-coment">Manuelita Chavez</div>
+								<div class="date-coment">17/05/2016</div>
+							</div>
+						</div>
+						<!--close box1-->
+						<!--box1-->
+						<div class="box-coment content-center">
+							<div class="first-box-coment">
+								<div class="avatar">
+									<img src="./img/home/avatar.jpg"/>
+								</div>
+								<div class="content-coment-box">
+									<div class="triangle-coment"></div>
+									<div class="txt-coment">
+										Super recomendado! Adoro los #MartesVisa
+									</div>
+									
+								</div>
+							</div>
+							<div class="second-box-coment">
+								<div class="name-coment">Manuelita Chavez</div>
+								<div class="date-coment">17/05/2016</div>
+							</div>
+						</div>
+						<!--close box1-->
+					</li>
+					<!--close coments 4-->
+				</ul>
+				<!--doots-->
+				<div id="bx-pager" class="dots-comentarios">
+					<a data-slide-index="0" href=""><span class="dots active-dots"></span></a>
+					<a data-slide-index="1" href=""><span class="dots"></span></a>
+					<a data-slide-index="2" href=""><span class="dots"></span></a>
+					<a data-slide-index="3" href=""><span class="dots"></span></a>
+				</div>
+
+
+				<!--<ul class="bxslider" style="margin-top:100px;">
+				  <li><img src="./img/home/avatar.jpg"/></li>
+				  <li><img src="./img/home/avatar.jpg"/></li>
+				  <li><img src="./img/home/avatar.jpg"/></li>
+				</ul>
+
+				<div id="bx-pager">
+					  <a data-slide-index="0" href=""><img src="./img/genericas/logo-visa.png"></a>
+					  <a data-slide-index="1" href=""><img src="./img/genericas/logo-visa.png"></a>
+					  <a data-slide-index="2" href=""><img src="./img/genericas/logo-visa.png"></a>
+				</div>-->
+				<!--close doots-->
+				<!--footer-->
+				<footer>
+					<div class="content-footer">
+						<div class="section">
+							<div class="row">
+								<div class="col-lg-10 col-md-12">
+									<p> <a href="http://apps.visa.com.co/MartesVisa/Pdf/TerminosYCondiciones.pdf" target="_new"><span class="azul">Ver cosndiciones y restaurantes participantes |</span> </a><a href="http://lac.visa.com/about/privacy.jsp" target="_new"><span class="azul">Política de Privacidad</span></a><br>
+									Visa International Service Association and (c) 2015 Visa Inc. Todos los derechos reservados. Mejor visualización en IE 9.0 - Firefox 29 o superior, permitir al navegador el uso de JavaScript.Diageo te invita a disfrutar con responsabilidad. Prohíbase el expendio de bebidas embriagantes a menores de edad, Ley 124 de 1994. El exceso de alcohol es perjudicial para la salud Ley 30 1996 Promoción válida del 5 de mayo al 24 de noviembre de 2015.
+									</p>
+								</div>
+								<div class="col-lg-2 col-md-12">
+									<div class="logo-footer">
+										<img src="./img/genericas/logo-visa.png">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</div>
+	</li>
+	<!--close-five-->
+</ul>
+<!--close pages-->
+
+	<script src="./js/function.js"></script>
+	<!--reloj-->
+	<script src="./js/moment.js"></script>
+	<!--sliders-->
+	<script src="./js/jquery.bxslider.min.js"></script>
+	<!--fullpage-->
+	<script src="./js/jquery.slimscroll.js"></script>
+	<script src="./js/jquery.fullpage.js"></script>
+	<!--animations-->
+	<script src="./js/jquery.easings.min.js"></script>
+	<script src="./js/TweenMax.min.js"></script>
+
+	<script type="text/javascript">
+
+		/***home***/
+	/****reloj***/
+
+	var $reloj = $('.content-reloj');
+
+	setInterval(function(){
+		var $time = moment();
+		$('.reloj-hour').html( $time.format('h') );
+		$('.reloj-minute').html( $time.format('mm') );
+		$('.reloj-second').html( $time.format('ss') );
+		$('.reloj-med').html( $time.format('a') );
+	}, 100);
+
+	/**slider-gal-reloj**/	
+
+	var slider = $('.slider-reloj').bxSlider({
+		controls: false,
+		pager: false,
+		auto: false
+	});
+
+	$('.fl-gal-reloj-next').click(function() {
+		slider.goToNextSlide();
+	});
+	$('.fl-gal-reloj-prev').click(function() {
+		slider.goToPrevSlide();
+	});
+
+	/***slider-comentarios**/
+
+	var sliderComentarios = $('.content-comentarios').bxSlider({
+		autoControls: false,
+		pager: false,
+		controls:false,
+		auto: false
+	});
+	$('.content-comentarios').bxSlider({
+	  pagerCustom: '#bx-pager-comentarios',
+	});
+
+	$('.bxslider').bxSlider({
+  		pagerCustom: '#bx-pager',
+  		controls:false
+	});
+	$('.dots-comentarios li a span:nth-child(2)').click(function(){
+		$('this').animate({
+			borderColor:'transparent',
+			backgroundColor:'#fcb315',
+		});
+	});
+
+	/***novedades***/
+	window.addEventListener("orientationchange", novedadsize, false);
+	window.addEventListener('resize',novedadsize, false);
+	function novedadsize(){
+	    var wh = window.innerHeight - 100;
+	    $('.novedad-img').css('height',wh);
+	}
+	novedadsize();
+
+	/**parallax**/
+	$('.pages').fullpage({
+		anchors: ['firstPage', 'secondPage', '3rdPage','4rdPage', '5rdPage' ],
+		navigation:true,
+		navigationTooltips:false,
+		navigationPosition: 'right',
+		css3: true,
+		resize : true,
+		scrollOverflow: true,
+		scrollingSpeed: 600,
+		afterLoad: function(anchorLink, index){
+
+			//section 1
+			if(index == 1){
+				$('.nav-header').first().animate({
+					backgroundColor:'transparent',
+					color:'#fff',
+				},50).fadeIn(50);
+
+				$('.nav-header').first().animate({
+					color:'#fff',
+				},200).fadeIn(200);
+
+				$('#fp-nav ul li span').first().animate({
+					background: 'red',
+				},200).fadeIn(200);
+			}
+			//section 2
+			if(index == 2){
+				//moving content reloj
+				$('.nav-header').first().animate({
+					color:'#000',
+					backgroundColor:'#fff',
+				});
+				$('#second-nav').first().animate({
+					borderColor:'#898989',
+					color:'#898989',
+				});
+				$('.content-box-reloj-h').first().animate({
+					opacity:1,
+					marginTop:'30',
+				},200).fadeIn(200);
+			}
+			//section 3
+			if(anchorLink == '3rdPage'){
+				//header
+				$('.nav-header').first().animate({
+					color:'#fff',
+					backgroundColor:'transparent',
+				});
+				$('#planes').find('h1').delay(100).first().animate({
+					opacity:1,
+					marginTop:'10',
+				},800).fadeIn(500);
+
+				TweenMax.to("#planes", 1.4, {marginTop:'10', opacity:1, delay: 0.4, ease:800});
+				TweenMax.to(".content-planes ul li:first-child", 0.7, {marginTop:'10', opacity:1, delay: 0.4 });
+				TweenMax.to(".content-planes ul li:nth-child(2)", 0.7, {marginTop:'10', opacity:1, delay: 0.6 });
+				TweenMax.to(".content-planes ul li:nth-child(3)", 0.7, {marginTop:'10', opacity:1, delay: 0.8 });
+				TweenMax.to(".content-planes ul li:nth-child(4)", 0.7, {marginTop:'10', opacity:1, delay: 1 });
+				TweenMax.to(".content-planes ul li:last-child", 0.7, {marginTop:'10', opacity:1, delay: 1.2 });
+				TweenMax.to(".content-planes .content-fl-nav-home", 0.7, {marginTop:'50', opacity:1, delay: 1.4 });
+
+			}
+			//section 4
+			if(anchorLink == '4rdPage'){
+				//header
+				$('.nav-header').first().animate({
+					color:'#000',
+					backgroundColor:'#fff',
+				});
+
+				TweenMax.to(".novedad-img img", 0.5, {left:'0', opacity:1, position:'relative',delay: 0.2 });
+				TweenMax.to(".txt-novedades, .fl-novedades", 0.5, { opacity:1,delay: 0.9 });
+				
+			}
+			if(anchorLink == '5rdPage'){
+				$('.nav-header').first().animate({
+					backgroundColor:'#ebebeb',
+					color:'#000',
+				});
+
+				TweenMax.to(".content-coments-home", 0.5, { marginTop:"0", opacity:1,delay: 0.5 });
+			}
+		}
+
+	});
+	
+	/***navigation fl scroll***/
+
+	$('#first-nav').click(function(e){
+		e.preventDefault();
+		$.fn.fullpage.moveSectionDown();
+		$('.nav-header').removeClass('header-dark');
+		$('.nav-header').addClass('header-white');
+		console.log('test');
+	});
+	$('#second-nav').click(function(e){
+		e.preventDefault();
+		$.fn.fullpage.moveSectionDown();
+		$('.nav-header').removeClass('header-white');
+		$('.nav-header').addClass('header-dark');
+		console.log('test');
+	});
+	$('#third-nav').click(function(e){
+		e.preventDefault();
+		$.fn.fullpage.moveSectionDown();
+	});
+	$('#four-nav').click(function(e){
+		e.preventDefault();
+		$.fn.fullpage.moveSectionDown();
+	});
+
+	/****finder***/
+	$('.find-restaurant').click(function(){
+		$('.nav-header li find-restaurant i.fa.fa-angle-down').animate({
+			opacity:'0',
+		});
+		$('.content-finder').slideToggle();
+	});
+	</script>
+
+</body>
+</html>

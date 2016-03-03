@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<title>Martes Visa</title>
+
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/modular.css">
+	<link rel="stylesheet" type="text/css" href="../css/layout.css">
+	<link rel="stylesheet" type="text/css" href="../css/restaurantes.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<script src="../js/jquery-1.12.1.min.js"></script>
+	
+
+</head>
+<body>
+
+<!--- nav header-->
+<div class="navbar">
+		<div class="logo-mv">
+			<span>#Martes Visa</span>
+		</div>
+		<ul class="nav-header">
+			<li class="find-restaurant"><i class="fa fa-angle-down"></i><i class="fa fa-angle-up"></i> Buscar restaurantes</li>
+			<!--<li>Ingresa / Registrate</li>-->
+			<li class="icon-main"><i class="fa fa-bars"></i></li>
+		</ul>
+</div>
+
+<!--close nav header-->
+<!---finder-->
+<div class="content-finder">
+	<div class="box-finder">
+		<div class="col-field-finder">
+			<input required="required" placeholder="Restaurante" name="restaurante" type="text">
+		</div>
+
+		<div class="col-field-finder">
+			<i class="fa fa-angle-down"></i>
+			<select name="restaurantes">
+				<option value="1" disabled="" selected="" style="display: none;">Ciudad</option>
+				<option value="barranquilla">Barranquilla</option>
+				<option value="bogota D.C">Bogotá D.C</option>
+				<option value="bucaramanga">Bucaramanga</option>
+				<option value="cali">Cali</option>
+				<option value="Cartagena de Indias">Cartagena de Indias</option>
+				<option value="Cúcuta">Cúcuta</option>
+				<option value="Medellín">Medellín</option>
+				<option value="Norte de Santander">Norte de Santander</option>
+				<option value="Pereira">Pereira</option>
+				<option value="Santa Marta">Santa Marta</option>
+				<option value="Santander">Santander</option>
+			</select>
+		</div>
+		<div class="col-field-finder">
+			<i class="fa fa-angle-down"></i>
+			<select name="zona">
+				<option value="1" disabled selected style="display: none;">Zona</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+			</select>
+		</div>
+		<div class="col-field-finder">
+			<i class="fa fa-angle-down"></i>
+			<select name="tipo de comida">
+				<option value="1" disabled selected style="display: none;">Tipo de comida</option>
+				<option value="Arabe">Arabe</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</select>
+		</div>
+		<div class="col-field-finder">
+			<i class="fa fa-angle-down"></i>
+			<select name="plan">
+				<option value="1" disabled selected style="display: none;">Plan</option>
+				<option value="Arabe">Arabe</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</select>
+		</div>
+		<div class="col-field-finder">
+			<button type="submit" id="saveForm">
+				<span>Buscar</span>
+			</button>
+		</div>
+
+	</div>
+</div>
+<!---close finder-->
+
+<div class="row">
+	<!--nav-lat-->
+	<div class="fl-rest-next"><i class="fa fa-angle-right"></i></div>
+	<div class="fl-rest-prev"><i class="fa fa-angle-left"></i></div>
+	<!--pop-ubicacion-->
+	<div class="bg-pop-ubicacion">
+
+		<div class="content-pop-ubicacion">
+			<div class="equis-ubicacion"><i class="fa fa-times"></i></div>
+		</div>
+	</div>
+	<!--close pop ubicacion-->
+	<!--col-left-->
+	<!--<div class="col-lg-3 col-md-12">-->
+		<div class="col-left-rest">
+			<h1 class="title-internas">RESTAURANTES</h1>
+			<div class="icon-back-restaurants">
+				<img src="../img/restaurantes/nav-back.png">
+				<span>volver a </br> restaurantes</span>
+			</div>
+		</div>
+
+	<!--</div>-->
+	<!--col-center-->
+	<!--<div class="col-lg-3 col-md-12">-->
+
+		<div class="col-center-rest">
+			<div class="main-description">
+				<div class="name-restaurant">
+					<div class="logo-rest">
+						<img src="../img/restaurantes/logo-rte.jpeg"/>
+					</div>
+					<h2 class="subtitle white">Absenta Bar</h2>
+				</div>
+				<div class="star-ranking">
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+					<i class="fa fa-star"></i>
+				</div>
+				<div class="star-calification">
+					<i class="fa fa-star-o"></i>
+					<i class="fa fa-star-o"></i>
+					<i class="fa fa-star-o"></i>
+					<i class="fa fa-star-o"></i>
+					<i class="fa fa-star-o"></i>
+				</div>
+				<div class="details white">
+					<span class="hour-r"><i class="fa fa-clock-o"></i><strong>De 12:30 p.m. a 9:00p.m.</strong></span>
+					<span class="location-r"><i class="fa fa-map-marker"></i> Bogotá - Medellín</span>
+					<span class="plan-r">Plan de amigos</span>
+					<span class="food-r">Comida peruana</span>
+					<span class="cost-r"><i class="fa fa-usd"></i>Plato entre $30.000 a $60.000</span>
+				</div>
+			</div>
+			<div class="sedes">
+				<ul class="bxslider-sedes">
+					<li>
+						<div class="box-sede">
+							<div class="title white">Sedes</div>
+							<p class="white"> 
+								Dirección: Carrera 105 No. 89 -14 local 6</br>
+								Ciudad: Cali</br>
+								Zona: Parque 93</br>
+								Teléfono: 3741011</br>
+								<span class="ver-mapa"><strong>ver mapa </strong><i class="fa fa-street-view"></i></span>
+							</p>
+						</div>
+						<hr>
+						<div class="box-sede">
+							<div class="title white">Sedes</div>
+							<p class="white"> 
+								Dirección: Carrera 105 No. 89 -14 local 6</br>
+								Ciudad: Cali</br>
+								Zona: Parque 93</br>
+								Teléfono: 3741011</br>
+								<span class="ver-mapa"><strong>ver mapa </strong><i class="fa fa-street-view"></i></span>
+							</p>
+						</div>
+					</li>
+					<li></li>
+					<li></li>
+				</ul>
+				<!--dots-->
+				<div id="bx-pager-sedes" class="dots-sedes">
+					<a data-slide-index="0" href=""><span class="dots active-dots"></span></a>
+					<a data-slide-index="1" href=""><span class="dots"></span></a>
+				</div>
+			</div>
+
+		</div>
+	<!--</div>-->
+	<!--col-right-->
+	<!--<div class="col-lg-6 col-md-12">-->
+		<div class="col-right-rest">
+			<!--<div class="subcontent-col-right">-->
+				<!--galeria - video-->
+				<div class="gal-rest">
+					<div class="btn-video"><span>VIDEO</span></div>
+					<div class="btn-gal"><span>GALERÍA</span></div>
+					<!--gal video-->
+					<div class="gal-video">
+						<iframe width="99%" height="315" src="https://www.youtube.com/embed/mHnbmaMLAPM" frameborder="0" allowfullscreen></iframe>
+					</div>
+					
+					<!--gal images-->
+					<div class="gal-images">
+						<ul class="bxslider-rest">
+							<li><img src="../img/restaurantes/gal-img.jpg"/></li>
+							<li><img src="../img/restaurantes/gal-img.jpg"/></li>
+							<li><img src="../img/restaurantes/gal-img.jpg"/></li>
+							<li><img src="../img/restaurantes/gal-img.jpg"/></li>
+							<li><img src="../img/restaurantes/gal-img.jpg"/></li>     
+						</ul>
+						<!--nav-fl-->
+						<div class="fl-gal-rest-next"><i class="fa fa-angle-right"></i></div>
+						<div class="fl-gal-rest-prev"><i class="fa fa-angle-left"></i></div>
+						<!--dots-->
+						<div id="bx-pager-rest" class="dots-sedes dots-gal-rest">
+							<a data-slide-index="0" href=""><span class="dots active-dots"></span></a>
+							<a data-slide-index="1" href=""><span class="dots"></span></a>
+							<a data-slide-index="2" href=""><span class="dots"></span></a>
+							<a data-slide-index="3" href=""><span class="dots"></span></a>
+							<a data-slide-index="4" href=""><span class="dots"></span></a>
+						</div>
+					</div>
+				</div>
+				<!--close galeria - video-->
+
+				<!-- nav-content -->
+				<div class="nav-tabs-rest">
+					<ul>
+
+						<li id="n-descripcion"><span>DESCRIPCIÓN</span></li>
+						<li id="n-curiosidades"><span>CURIOSIDADES</span></li>
+						<li id="n-bebidas"><span>BEBIDAS</span></li>
+						<li id="n-comentarios"><span>COMENTARIOS</span></li>
+						<li class="btn-up"><i class="fa fa-angle-up"></i></li>
+					</ul>
+
+				</div>
+
+				<!-- fixed column -->
+				<div id="scrollcontent">
+					<div class="subcontent-col-right">
+						<!--contenido-->
+						<ul class="contenido-rest" id="contenido-r">
+							
+							<li id="descripcion-r">
+								<h2 class="destacado gray-dark">
+									En Absenta podrás disfrutar de las mejores tapas y platos pequeños de la ciudad, acompañados de la mejor atención y de una buena botella de vino. 
+								</h2>
+								<p>
+									El restaurante busca ser siempre la mejor experiencia sensorial que tengas en Bogotá, por eso sus espacios están diseñados, para que te sientas como si estuvieras en casa. </br>
+									La comida mediterránea ha sido durante años la inspiración en Nueve, para sorprender y enamorar en cada bocado y se busca el maridaje perfecto, al recomendar el vino adecuado para cada uno de los platos servidos en tu mesa.
+								</p>
+							</li>
+							<li id="curiosidades-r">
+								<h2 class="destacado gray-dark">En 1988</h2>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+									Ut enim ad minim veniam, quis nostrudi.
+								</p>
+								<h2 class="destacado gray-dark">Platos destacados</h2>
+
+								<p>
+									<strong class="yellow">Crepe mariscos:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+									Ut enim ad minim veniam, quis nostrudi.
+								</p></br>
+								<p>
+									<strong class="yellow">Crepe mariscos:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+									Ut enim ad minim veniam, quis nostrudi.
+								</p></br>
+								<p>
+									<strong class="yellow">Crepe mariscos:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+									Ut enim ad minim veniam, quis nostrudi.
+								</p>
+
+							</li>
+
+							<li id="bebidas-r">
+
+								<div class="content-bebidas">
+									<div class="subcontent-bebidas">
+										<ul class="bxslider-bebidas">
+											<li>
+												<div class="col-left-bebidas">
+													<img src="../img/restaurantes/vino.jpeg"/>
+												</div>
+												<div class="col-right-bebidas">
+													<div class="logo-b">
+														<img src="../img/restaurantes/logo-b.jpeg"/>
+													</div>
+													<h3>120 Carmenere</h3>
+													<p>Ideal para acompañar con:
+													Pastas, salsas con tomate, quesos
+													semi - madurados, carnes suaves.</p>
+												</div>
+											</li>
+											<li>
+												<div class="col-left-bebidas">
+													<img src="../img/restaurantes/vino.jpeg"/>
+												</div>
+												<div class="col-right-bebidas">
+													<div class="logo-b">
+														<img src="../img/restaurantes/logo-b.jpeg"/>
+													</div>
+													<h3>120 Carmenere</h3>
+													<p>Ideal para acompañar con:
+													Pastas, salsas con tomate, quesos
+													semi - madurados, carnes suaves.</p>
+												</div>
+											</li>
+											<li>
+												<div class="col-left-bebidas">
+													<img src="../img/restaurantes/vino.jpeg"/>
+												</div>
+												<div class="col-right-bebidas">
+													<div class="logo-b">
+														<img src="../img/restaurantes/logo-b.jpeg"/>
+													</div>
+													<h3>120 Carmenere</h3>
+													<p>Ideal para acompañar con:
+													Pastas, salsas con tomate, quesos
+													semi - madurados, carnes suaves.</p>
+												</div>
+											</li>
+											<li>
+												<div class="col-left-bebidas">
+													<img src="../img/restaurantes/vino.jpeg"/>
+												</div>
+												<div class="col-right-bebidas">
+													<div class="logo-b">
+														<img src="../img/restaurantes/logo-b.jpeg"/>
+													</div>
+													<h3>120 Carmenere</h3>
+													<p>Ideal para acompañar con:
+													Pastas, salsas con tomate, quesos
+													semi - madurados, carnes suaves.</p>
+												</div>
+											</li>
+											<li>
+												<div class="col-left-bebidas">
+													<img src="../img/restaurantes/vino.jpeg"/>
+												</div>
+												<div class="col-right-bebidas">
+													<div class="logo-b">
+														<img src="../img/restaurantes/logo-b.jpeg"/>
+													</div>
+													<h3>120 Carmenere</h3>
+													<p>Ideal para acompañar con:
+													Pastas, salsas con tomate, quesos
+													semi - madurados, carnes suaves.</p>
+												</div>
+											</li>
+										</ul>
+									</div>
+									
+									<div id="bx-pager-bebidas" class="dots-bebidas">
+										<a data-slide-index="0" href=""><span class="dots active-dots"></span></a>
+										<a data-slide-index="1" href=""><span class="dots"></span></a>
+										<a data-slide-index="2" href=""><span class="dots"></span></a>
+										<a data-slide-index="3" href=""><span class="dots"></span></a>
+										<a data-slide-index="4" href=""><span class="dots"></span></a>
+									</div>
+								</div>
+								
+							</li>
+
+							<li id="comentarios-r">
+								<!--coments-->
+								<ul class="bxslider">
+									<!---coments 1-->
+									<li>
+										<!--box1-->
+										<div class="box-coment content-center">
+											<div class="first-box-coment">
+												<div class="avatar">
+													<img src="../img/home/avatar.jpg"/>
+												</div>
+												<div class="content-coment-box">
+													<div class="triangle-coment triangle-coment-gray"></div>
+													<div class="txt-coment txt-coment-gray">
+														Super recomendado! Adoro los #MartesVisa
+													</div>
+													
+												</div>
+											</div>
+											<div class="second-box-coment">
+												<div class="name-coment">Manuelita Chavez</div>
+												<div class="date-coment">17/05/2016</div>
+											</div>
+										</div>
+										<!--close box1-->
+										<!--box1-->
+										<div class="box-coment content-center">
+											<div class="first-box-coment">
+												<div class="avatar">
+													<img src="../img/home/avatar.jpg"/>
+												</div>
+												<div class="content-coment-box">
+													<div class="triangle-coment triangle-coment-gray"></div>
+													<div class="txt-coment txt-coment-gray">
+														Super recomendado! Adoro los #MartesVisa
+													</div>
+													
+												</div>
+											</div>
+											<div class="second-box-coment">
+												<div class="name-coment">Manuelita Chavez</div>
+												<div class="date-coment">17/05/2016</div>
+											</div>
+										</div>
+										<!--close box1-->
+									</li>
+									<!--close coments 1-->
+									<!---coments 2-->
+									<li>
+										<!--box1-->
+										<div class="box-coment content-center">
+											<div class="first-box-coment">
+												<div class="avatar">
+													<img src="../img/home/avatar.jpg"/>
+												</div>
+												<div class="content-coment-box">
+													<div class="triangle-coment triangle-coment-gray"></div>
+													<div class="txt-coment txt-coment-gray">
+														Super recomendado! Adoro los #MartesVisa
+													</div>
+													
+												</div>
+											</div>
+											<div class="second-box-coment">
+												<div class="name-coment">Manuelita Chavez</div>
+												<div class="date-coment">17/05/2016</div>
+											</div>
+										</div>
+										<!--close box1-->
+										<!--box1-->
+										<div class="box-coment content-center">
+											<div class="first-box-coment">
+												<div class="avatar">
+													<img src="../img/home/avatar.jpg"/>
+												</div>
+												<div class="content-coment-box">
+													<div class="triangle-coment triangle-coment-gray"></div>
+													<div class="txt-coment txt-coment-gray">
+														Super recomendado! Adoro los #MartesVisa
+													</div>
+													
+												</div>
+											</div>
+											<div class="second-box-coment">
+												<div class="name-coment">Manuelita Chavez</div>
+												<div class="date-coment">17/05/2016</div>
+											</div>
+										</div>
+										<!--close box1-->
+									</li>
+									<!--close coments 2-->
+									<!---coments 3-->
+									<li>
+										<!--box1-->
+										<div class="box-coment content-center">
+											<div class="first-box-coment">
+												<div class="avatar">
+													<img src="../img/home/avatar.jpg"/>
+												</div>
+												<div class="content-coment-box">
+													<div class="triangle-coment triangle-coment-gray"></div>
+													<div class="txt-coment txt-coment-gray">
+														Super recomendado! Adoro los #MartesVisa
+													</div>
+													
+												</div>
+											</div>
+											<div class="second-box-coment">
+												<div class="name-coment">Manuelita Chavez</div>
+												<div class="date-coment">17/05/2016</div>
+											</div>
+										</div>
+										<!--close box1-->
+										<!--box1-->
+										<div class="box-coment content-center">
+											<div class="first-box-coment">
+												<div class="avatar">
+													<img src="../img/home/avatar.jpg"/>
+												</div>
+												<div class="content-coment-box">
+													<div class="triangle-coment triangle-coment-gray"></div>
+													<div class="txt-coment txt-coment-gray">
+														Super recomendado! Adoro los #MartesVisa
+													</div>
+													
+												</div>
+											</div>
+											<div class="second-box-coment">
+												<div class="name-coment">Manuelita Chavez</div>
+												<div class="date-coment">17/05/2016</div>
+											</div>
+										</div>
+										<!--close box1-->
+									</li>
+									<!--close coments 3-->
+									<!---coments 4-->
+									<li>
+										<!--box1-->
+										<div class="box-coment content-center">
+											<div class="first-box-coment">
+												<div class="avatar">
+													<img src="../img/home/avatar.jpg"/>
+												</div>
+												<div class="content-coment-box">
+													<div class="triangle-coment triangle-coment-gray"></div>
+													<div class="txt-coment txt-coment-gray">
+														Super recomendado! Adoro los #MartesVisa
+													</div>
+													
+												</div>
+											</div>
+											<div class="second-box-coment">
+												<div class="name-coment">Manuelita Chavez</div>
+												<div class="date-coment">17/05/2016</div>
+											</div>
+										</div>
+										<!--close box1-->
+										<!--box1-->
+										<div class="box-coment content-center">
+											<div class="first-box-coment">
+												<div class="avatar">
+													<img src="../img/home/avatar.jpg"/>
+												</div>
+												<div class="content-coment-box">
+													<div class="triangle-coment triangle-coment-gray"></div>
+													<div class="txt-coment txt-coment-gray">
+														Super recomendado! Adoro los #MartesVisa
+													</div>
+													
+												</div>
+											</div>
+											<div class="second-box-coment">
+												<div class="name-coment">Manuelita Chavez</div>
+												<div class="date-coment">17/05/2016</div>
+											</div>
+										</div>
+										<!--close box1-->
+									</li>
+									<!--close coments 4-->
+								</ul>
+								<!--doots-->
+								<div id="bx-pager" class="dots-comentarios">
+									<a data-slide-index="0" href=""><span class="dots active-dots"></span></a>
+									<a data-slide-index="1" href=""><span class="dots"></span></a>
+									<a data-slide-index="2" href=""><span class="dots"></span></a>
+									<a data-slide-index="3" href=""><span class="dots"></span></a>
+								</div>
+								<!--close comments-->
+								<!--relacionados-->
+
+								<div class="content-relacionados">
+									<h2 class="destacado-line">Relacionados</h2>
+									<!--box-->
+									<div class="box-relacionados">
+										<div class="img-relacionados">
+											<img src="../img/restaurantes/relacionado.jpeg"/>
+										</div>
+										<div class="franja-r">
+											<span>Alo Brasil</span>
+											<i class="fa fa-plus"></i>
+										</div>
+									</div>
+									<!--close box-->
+									<!--box-->
+									<div class="box-relacionados">
+										<div class="img-relacionados">
+											<img src="../img/restaurantes/relacionado.jpeg"/>
+										</div>
+										<div class="franja-r">
+											<span>Alo Brasil</span>
+											<i class="fa fa-plus"></i>
+										</div>
+									</div>
+									<!--close box-->
+								</div>
+								
+							</li>
+						</ul>
+						<!--descripción-->
+					</div>
+				</div>
+			<!--</div>-->
+		</div>
+	<!--</div>-->
+</div>
+
+	<script src="../js/function.js"></script>
+	<script src="../js/moment.js"></script>
+	<script src="../js/jquery.bxslider.min.js"></script>
+	<script src="../js/jquery.fullpage.js"></script>
+	<script src="../js/jquery.easings.min.js"></script>
+	<script src="../js/TweenMax.min.js"></script>
+	<script src="../js/jquery.scrollTo.min.js"></script>
+
+</body>
+</html>
